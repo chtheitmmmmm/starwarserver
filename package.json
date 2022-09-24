@@ -1,0 +1,27 @@
+{
+  "name": "swserver",
+  "version": "1.0.0",
+  "description": "1.0.0 version, no room is given, just one room.",
+  "main": "index.js",
+  "bin": "./dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "encoding": "^0.1.13",
+    "node-notifier": "^10.0.1",
+    "pkg": "^5.8.0",
+    "typescript": "^4.8.3",
+    "uglyjs": "^3.1.1"
+  },
+  "dependencies": {
+    "async": "^3.2.4",
+    "ipip-ipdb": "^0.6.0",
+    "uuid": "^9.0.0"
+  }
+}

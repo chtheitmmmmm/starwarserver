@@ -1,0 +1,55 @@
+{
+  "types": [
+    {
+      "type": "player",
+      "codes": [
+        {
+          "name": "lion",
+          "code": 1
+        },
+        {
+          "name": "bird",
+          "code": 2
+        }
+      ]
+    },
+    {
+      "type": "enemy",
+      "codes": [
+        {
+          "name": "sa_1",
+          "code": 1
+        }
+      ]
+    },
+    {
+      "type": "weapon",
+      "codes": [
+        {
+          "name": "red long",
+          "code": 10
+        },
+        {
+          "name": "red triangle",
+          "code": 11
+        },
+        {
+          "name": "red point",
+          "code": 12
+        },
+        {
+          "name": "blue long",
+          "code": 20
+        },
+        {
+          "name": "blue triangle",
+          "code": 21
+        },
+        {
+          "name": "blue point",
+          "code": 22
+        }
+      ]
+    }
+  ]
+}

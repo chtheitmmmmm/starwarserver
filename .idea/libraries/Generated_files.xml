@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/app.js" />
+        <item url="file://$PROJECT_DIR$/dist/constants.js" />
+        <item url="file://$PROJECT_DIR$/dist/enemy.js" />
+        <item url="file://$PROJECT_DIR$/dist/player.js" />
+        <item url="file://$PROJECT_DIR$/dist/rsvdt.js" />
+        <item url="file://$PROJECT_DIR$/dist/server.js" />
+        <item url="file://$PROJECT_DIR$/dist/vector2.js" />
+        <item url="file://$PROJECT_DIR$/dist/writelog.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/app.js" />
+      <root url="file://$PROJECT_DIR$/dist/constants.js" />
+      <root url="file://$PROJECT_DIR$/dist/enemy.js" />
+      <root url="file://$PROJECT_DIR$/dist/player.js" />
+      <root url="file://$PROJECT_DIR$/dist/rsvdt.js" />
+      <root url="file://$PROJECT_DIR$/dist/server.js" />
+      <root url="file://$PROJECT_DIR$/dist/vector2.js" />
+      <root url="file://$PROJECT_DIR$/dist/writelog.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

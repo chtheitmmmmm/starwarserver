@@ -1,0 +1,44 @@
+This text describes how starwar's communication protocol is.
+
+terms
+    player -- refer to a player who have a connection to our server
+    plane -- aka player
+    type-code -- every plane has a type code, see typecode.txt
+    id -- an identifier for an online player.
+
+port
+    The server port is 9800(see also variable "port" defined in constants.ts)
+
+description
+    -> 1. The Code
+    When a player first connect to our server by TCP connection, he sends his plane's type-code
+    which could be read by readInt32LE function.
+    <- 2. The id
+    server alloc an id th the player
+    -> 4. data
+    At last, the player will send instructor to server
+    {
+
+    }
+    stat is its plane's stat, such as left1\2\3, right1\2\3, ordinary.
+
+    << 5. broadcast
+    And our server will broadcast its data to every exists players.
+        its data's struct(see also app.ts):
+            export type appdata = {
+                'enemys': Array<{
+                    'code': number,
+                    'pos': Vector2<number>,
+                    'hp': number
+                }>,
+                'players': Array<{
+                    'id': string,
+                    'code': number,
+                    'pos': Vector2<number>,
+                    'hp': number
+                }>
+            }
+    -- 6. calculate
+    While reach every special timestep
+    1.enemy shoot instructor will be sent to every player;
+    2.enemy generate instructor will be sent to every player;
