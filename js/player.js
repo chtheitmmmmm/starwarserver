@@ -17,11 +17,27 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.players = exports.Player = void 0;
 var constants_1 = require("./constants");
+var uuid_1 = require("uuid");
 var Player = (function () {
     function Player(socket, code) {
+        this.data = {
+            code: 0,
+            id: (0, uuid_1.v4)()
+        };
         this.socket = socket;
         this.data.code = code;
     }
+    Player.prototype.getData = function (callback) {
+        this.socket.write(JSON.stringify({
+            type: 'global'
+        }));
+        this.socket.on('data', function (data) {
+            data = JSON.parse(data.toString());
+            if (data['type'] === 'global') {
+                callback(data);
+            }
+        });
+    };
     return Player;
 }());
 exports.Player = Player;

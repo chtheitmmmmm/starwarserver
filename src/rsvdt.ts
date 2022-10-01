@@ -1,16 +1,4 @@
 import {typecode, ok, code_illegal, code_length_illegal} from "./constants";
-
-type stat_code = -3 | -2 | -1 | 0 | 1 | 2 | 3 | number
-
-export type dt = {
-    pos: {
-        x: number,
-        y: number
-    },
-    stat: stat_code
-}
-
-
 // 解析用户第一次发送的数据
 export
 function rsvdt_first(data:Buffer) : symbol {

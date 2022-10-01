@@ -1,31 +1,8 @@
 import {readFileSync} from "fs";
-import {Vector2} from "./vector2";
 
 export const port = 9800;  // 服务器工作端口
-
-
-
-export const v1len = 36    // v1随机id长度
-export const data_length = 53 // 玩家发送实时数据的长度
-export const room_pool_len = 20 // 最多支持20个房间
 export const max_player_num = 5
 export const encoding : 'utf-8' = 'utf-8'
-export const enemyGenInterval = {
-    easy: 3000,
-    medium: 2000,
-    difficult: 1000
-} // 敌人生成时间间隔，难度等级随着人数增加
-export const window_size: Vector2<number> = {
-    x: 640,
-    y: 797
-}
-export const FPS: 60 = 60
-export const plane_size: Vector2<number> = {
-    x: 128,
-    y: 128
-}
-
-export const player_hp: number = 100;
 
 const typecodepath = "../typecode.json"
 export const dialogpath = '../logs.txt'
