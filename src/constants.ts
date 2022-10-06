@@ -8,7 +8,7 @@ const typecodepath = "../typecode.json"
 export const dialogpath = '../logs.txt'
 type typecodetype = {
     'types': Array<{
-        "name": string,
+        "type": string,
         'codes': Array<{
             'name': string,
             'code': number
@@ -48,3 +48,4 @@ export const codeLengthIllegalDiag: diag = {
     sym: code_length_illegal
 }
 
+export const invincible_time = 3000;        // 玩家初次加入的无敌时间

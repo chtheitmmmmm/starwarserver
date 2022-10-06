@@ -19,6 +19,26 @@
         {
           "name": "sa_1",
           "code": 1
+        },
+        {
+          "name": "sc_1",
+          "code": 2
+        },
+        {
+          "name": "sc_2",
+          "code": 3
+        },
+        {
+          "name": "sc_3",
+          "code": 4
+        },
+        {
+          "name": "sc_3",
+          "code": 5
+        },
+        {
+          "name": "sc_1",
+          "code": 6
         }
       ]
     },

@@ -3,6 +3,7 @@
  */
 
 import {Socket} from "net";
+
 import {
     ok,
     code_length_illegal,
@@ -19,7 +20,8 @@ import {openSync, writeFileSync} from "fs";
 export let ipip = require('ipip-ipdb')
 export let cities = new ipip.City('../ipipfree.ipdb')
 
-export function getcity(sok:Socket) {
+export
+function getcity(sok:Socket) {
     if (sok.address().family === 'IPv4') {
         const info = cities.findInfo(sok.address().address, 'CN')
         return `${info.countryName}, ${info.regionName}, ${info.cityName}`
@@ -28,8 +30,10 @@ export function getcity(sok:Socket) {
     }
 }
 
-export function genlog(data, sok:Socket, symdiag:diag) {
-   return Buffer.from(`${symdiag.tp} ${symdiag.sym.description}\n内容：${data.toString()}\n${sok.address().address} from ${getcity(sok)}\n\n`)
+export
+function genlog(data, sok:Socket, symdiag:diag) {
+    const time = new Date(Date.now())
+    return Buffer.from(`${time.getFullYear()}年${time.getMonth() + 1}月${time.getDate()}日 ${time.toLocaleTimeString()}\n${symdiag.tp} ${symdiag.sym.description}\n内容：${data.toString()}\n${sok.address().address} from ${getcity(sok)}\n\n`)
 }
 
 export

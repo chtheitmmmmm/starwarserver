@@ -22,31 +22,4 @@ class Player{
         this.socket = socket;
         this.data.code = code;
     }
-    getData(callback: (data: Buffer) => void) {
-        this.socket.write(JSON.stringify({
-            type: 'global'
-        }))
-        this.socket.on('data', (data) => {
-            data = JSON.parse(data.toString())
-            if (data['type'] === 'global') {
-                callback(data)
-            }
-        })
-    }
-}
-
-export
-const players = new
-class PlayerPool extends Array<Player> {
-    add(socket: Socket, appdata: string, code: Buffer) : Player | undefined{
-        if (this.length < max_player_num) {
-            const player = new Player(socket, code.readInt32LE())
-            socket.write(player.data.id, encoding)
-            this.push(player)
-            // 写入当前app的数据
-            socket.write(appdata, encoding)
-            return player
-        }
-        return undefined
-    }
 }

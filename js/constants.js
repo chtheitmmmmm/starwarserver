@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.codeLengthIllegalDiag = exports.codeIllegalDiag = exports.ipv6diag = exports.okdiag = exports.ipv6 = exports.code_length_illegal = exports.code_illegal = exports.ok = exports.typecode = exports.dialogpath = exports.encoding = exports.max_player_num = exports.port = void 0;
-var fs_1 = require("fs");
+exports.invincible_time = exports.codeLengthIllegalDiag = exports.codeIllegalDiag = exports.ipv6diag = exports.okdiag = exports.ipv6 = exports.code_length_illegal = exports.code_illegal = exports.ok = exports.typecode = exports.dialogpath = exports.encoding = exports.max_player_num = exports.port = void 0;
+const fs_1 = require("fs");
 exports.port = 9800;
 exports.max_player_num = 5;
 exports.encoding = 'utf-8';
-var typecodepath = "../typecode.json";
+const typecodepath = "../typecode.json";
 exports.dialogpath = '../logs.txt';
 exports.typecode = JSON.parse((0, fs_1.readFileSync)(typecodepath).toString('utf-8'));
 exports.ok = Symbol('正常');
@@ -28,3 +28,4 @@ exports.codeLengthIllegalDiag = {
     tp: "error",
     sym: exports.code_length_illegal
 };
+exports.invincible_time = 3000;
